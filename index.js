@@ -7,7 +7,7 @@ app.get("/", (req, res) => res.send("Hello Jonathan"));
 
 const messages = [];
 
-app.post("/message", (req, res) => {
+app.post("/messages", (req, res) => {
     if(!(req.body?.message)) {
         res.status(400).send("No message specified!");
     } else {
