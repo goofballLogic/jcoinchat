@@ -1,0 +1,15 @@
+{
+  "name": "jcoinchat",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:goofballLogic/jcoinchat.git",
+  "author": "jcoin",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "scripts": {
+    "start": "node ."
+  },
+  "type": "module"
+}
