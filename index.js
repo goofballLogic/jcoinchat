@@ -5,7 +5,7 @@ const app = express();
 app.use(json());
 app.use(cors());
 
-app.get("/", (req, res) => res.send("Hello Jonathan"));
+app.get("/", (_req, res) => res.send("Hello Jonathan"));
 
 const messages = [];
 
@@ -14,6 +14,7 @@ app.post("/messages", (req, res) => {
         res.status(400).send("No message specified!");
     } else {
         messages.push({ server: { when: Date.now() }, ...req.body });
+        if(messages.length > 100) messages.shift();
         res.status(200).send(messages);
     }
 
